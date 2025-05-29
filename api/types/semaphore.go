@@ -23,7 +23,7 @@ import (
 
 	"github.com/gravitational/trace"
 
-	"github.com/gravitational/teleport/api/constants"
+	"github.com/rtalhouk/teleport/api/constants"
 )
 
 // SemaphoreKindConnection is the semaphore kind used by

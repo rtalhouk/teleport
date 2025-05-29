@@ -22,8 +22,8 @@ import (
 
 	"github.com/gravitational/trace"
 
-	"github.com/gravitational/teleport/api/constants"
-	"github.com/gravitational/teleport/api/utils"
+	"github.com/rtalhouk/teleport/api/constants"
+	"github.com/rtalhouk/teleport/api/utils"
 )
 
 // User represents teleport embedded user or external user.

@@ -30,9 +30,9 @@ import (
 	"github.com/gravitational/trace"
 	"golang.org/x/crypto/ssh"
 
-	"github.com/gravitational/teleport/api/utils/keypaths"
-	"github.com/gravitational/teleport/api/utils/keys"
-	"github.com/gravitational/teleport/api/utils/sshutils"
+	"github.com/rtalhouk/teleport/api/utils/keypaths"
+	"github.com/rtalhouk/teleport/api/utils/keys"
+	"github.com/rtalhouk/teleport/api/utils/sshutils"
 )
 
 const (

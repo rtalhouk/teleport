@@ -29,8 +29,8 @@ import (
 	oteltrace "go.opentelemetry.io/otel/trace"
 	"golang.org/x/crypto/ssh"
 
-	"github.com/gravitational/teleport/api/observability/tracing"
-	"github.com/gravitational/teleport/api/utils/sshutils"
+	"github.com/rtalhouk/teleport/api/observability/tracing"
+	"github.com/rtalhouk/teleport/api/utils/sshutils"
 )
 
 const (

@@ -28,10 +28,10 @@ import (
 	"github.com/stretchr/testify/require"
 	"golang.org/x/crypto/ssh"
 
-	"github.com/gravitational/teleport/api/identityfile"
-	"github.com/gravitational/teleport/api/profile"
-	"github.com/gravitational/teleport/api/utils/keys"
-	"github.com/gravitational/teleport/api/utils/sshutils"
+	"github.com/rtalhouk/teleport/api/identityfile"
+	"github.com/rtalhouk/teleport/api/profile"
+	"github.com/rtalhouk/teleport/api/utils/keys"
+	"github.com/rtalhouk/teleport/api/utils/sshutils"
 )
 
 func TestLoadTLS(t *testing.T) {

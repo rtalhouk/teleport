@@ -22,8 +22,8 @@ import (
 
 	"github.com/gravitational/trace"
 
-	apidefaults "github.com/gravitational/teleport/api/defaults"
-	"github.com/gravitational/teleport/api/types"
+	apidefaults "github.com/rtalhouk/teleport/api/defaults"
+	"github.com/rtalhouk/teleport/api/types"
 )
 
 // Duration is a wrapper around duration

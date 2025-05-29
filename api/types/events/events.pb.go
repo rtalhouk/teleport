@@ -8,9 +8,9 @@ import (
 	_ "github.com/gogo/protobuf/gogoproto"
 	proto "github.com/gogo/protobuf/proto"
 	github_com_gogo_protobuf_types "github.com/gogo/protobuf/types"
-	types "github.com/gravitational/teleport/api/types"
-	_ "github.com/gravitational/teleport/api/types/wrappers"
-	github_com_gravitational_teleport_api_types_wrappers "github.com/gravitational/teleport/api/types/wrappers"
+	types "github.com/rtalhouk/teleport/api/types"
+	_ "github.com/rtalhouk/teleport/api/types/wrappers"
+	github_com_gravitational_teleport_api_types_wrappers "github.com/rtalhouk/teleport/api/types/wrappers"
 	_ "google.golang.org/protobuf/types/known/structpb"
 	_ "google.golang.org/protobuf/types/known/timestamppb"
 	_ "google.golang.org/protobuf/types/known/wrapperspb"
@@ -6964,7 +6964,7 @@ type Identity struct {
 	// identities. This can be empty on older Teleport clients.
 	KubernetesCluster string `protobuf:"bytes,10,opt,name=KubernetesCluster,proto3" json:"kubernetes_cluster,omitempty"`
 	// Traits hold claim data used to populate a role at runtime.
-	Traits github_com_gravitational_teleport_api_types_wrappers.Traits `protobuf:"bytes,11,opt,name=Traits,proto3,customtype=github.com/gravitational/teleport/api/types/wrappers.Traits" json:"traits,omitempty"`
+	Traits github_com_gravitational_teleport_api_types_wrappers.Traits `protobuf:"bytes,11,opt,name=Traits,proto3,customtype=github.com/rtalhouk/teleport/api/types/wrappers.Traits" json:"traits,omitempty"`
 	// RouteToApp holds routing information for applications. Routing metadata
 	// allows Teleport web proxy to route HTTP requests to the appropriate
 	// cluster and Teleport application proxy within the cluster.
@@ -8040,7 +8040,7 @@ type ElasticsearchRequest struct {
 	// Body is the request HTTP body.
 	Body []byte `protobuf:"bytes,8,opt,name=Body,proto3" json:"body"`
 	// Headers are the HTTP request headers.
-	Headers github_com_gravitational_teleport_api_types_wrappers.Traits `protobuf:"bytes,9,opt,name=Headers,proto3,customtype=github.com/gravitational/teleport/api/types/wrappers.Traits" json:"headers,omitempty"`
+	Headers github_com_gravitational_teleport_api_types_wrappers.Traits `protobuf:"bytes,9,opt,name=Headers,proto3,customtype=github.com/rtalhouk/teleport/api/types/wrappers.Traits" json:"headers,omitempty"`
 	// Category represents the category if API being accessed in a given request.
 	Category ElasticsearchCategory `protobuf:"varint,10,opt,name=Category,proto3,enum=events.ElasticsearchCategory" json:"category"`
 	// Target is an optional field indicating the target index or set of indices used as a subject of request.

@@ -38,12 +38,12 @@ import (
 	oteltrace "go.opentelemetry.io/otel/trace"
 	"golang.org/x/net/http/httpproxy"
 
-	"github.com/gravitational/teleport/api/client/proxy"
-	"github.com/gravitational/teleport/api/constants"
-	"github.com/gravitational/teleport/api/defaults"
-	"github.com/gravitational/teleport/api/observability/tracing"
-	"github.com/gravitational/teleport/api/utils"
-	"github.com/gravitational/teleport/api/utils/keys"
+	"github.com/rtalhouk/teleport/api/client/proxy"
+	"github.com/rtalhouk/teleport/api/constants"
+	"github.com/rtalhouk/teleport/api/defaults"
+	"github.com/rtalhouk/teleport/api/observability/tracing"
+	"github.com/rtalhouk/teleport/api/utils"
+	"github.com/rtalhouk/teleport/api/utils/keys"
 )
 
 // Config specifies information when building requests with the

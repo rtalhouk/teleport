@@ -34,9 +34,9 @@ import (
 	"github.com/go-piv/piv-go/piv"
 	"github.com/gravitational/trace"
 
-	"github.com/gravitational/teleport/api"
-	attestation "github.com/gravitational/teleport/api/gen/proto/go/attestation/v1"
-	"github.com/gravitational/teleport/api/utils/retryutils"
+	"github.com/rtalhouk/teleport/api"
+	attestation "github.com/rtalhouk/teleport/api/gen/proto/go/attestation/v1"
+	"github.com/rtalhouk/teleport/api/utils/retryutils"
 )
 
 const (

@@ -24,8 +24,8 @@ import (
 	"github.com/gravitational/trace"
 	"golang.org/x/exp/slices"
 
-	"github.com/gravitational/teleport/api/defaults"
-	"github.com/gravitational/teleport/api/utils"
+	"github.com/rtalhouk/teleport/api/defaults"
+	"github.com/rtalhouk/teleport/api/utils"
 )
 
 // Resource represents common properties for all resources.

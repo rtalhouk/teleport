@@ -8,7 +8,7 @@ import (
 	fmt "fmt"
 	_ "github.com/gogo/protobuf/gogoproto"
 	proto "github.com/gogo/protobuf/proto"
-	github_com_gravitational_teleport_api_types "github.com/gravitational/teleport/api/types"
+	github_com_gravitational_teleport_api_types "github.com/rtalhouk/teleport/api/types"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
@@ -136,7 +136,7 @@ type DialRequest struct {
 	NodeID string `protobuf:"bytes,1,opt,name=NodeID,proto3" json:"NodeID,omitempty"`
 	// TunnelType is the type of service being accessed. This differentiates agents that
 	// create multiple reverse tunnels for different services.
-	TunnelType github_com_gravitational_teleport_api_types.TunnelType `protobuf:"bytes,2,opt,name=TunnelType,proto3,casttype=github.com/gravitational/teleport/api/types.TunnelType" json:"TunnelType,omitempty"`
+	TunnelType github_com_gravitational_teleport_api_types.TunnelType `protobuf:"bytes,2,opt,name=TunnelType,proto3,casttype=github.com/rtalhouk/teleport/api/types.TunnelType" json:"TunnelType,omitempty"`
 	// Source is the original source address of the client.
 	Source *NetAddr `protobuf:"bytes,3,opt,name=Source,proto3" json:"Source,omitempty"`
 	// Destination is the destination address to connect to over the reverse tunnel.

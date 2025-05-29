@@ -26,12 +26,12 @@ import (
 	oteltrace "go.opentelemetry.io/otel/trace"
 	"golang.org/x/crypto/ssh"
 
-	"github.com/gravitational/teleport/api/client/proxy"
-	"github.com/gravitational/teleport/api/client/webclient"
-	"github.com/gravitational/teleport/api/constants"
-	"github.com/gravitational/teleport/api/observability/tracing"
-	tracessh "github.com/gravitational/teleport/api/observability/tracing/ssh"
-	"github.com/gravitational/teleport/api/utils/sshutils"
+	"github.com/rtalhouk/teleport/api/client/proxy"
+	"github.com/rtalhouk/teleport/api/client/webclient"
+	"github.com/rtalhouk/teleport/api/constants"
+	"github.com/rtalhouk/teleport/api/observability/tracing"
+	tracessh "github.com/rtalhouk/teleport/api/observability/tracing/ssh"
+	"github.com/rtalhouk/teleport/api/utils/sshutils"
 )
 
 // ContextDialer represents network dialer interface that uses context

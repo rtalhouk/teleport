@@ -26,7 +26,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/gravitational/teleport/api/defaults"
+	"github.com/rtalhouk/teleport/api/defaults"
 )
 
 func newPingHandler(path string) http.Handler {

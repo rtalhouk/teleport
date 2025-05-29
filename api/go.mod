@@ -1,6 +1,6 @@
-module github.com/gravitational/teleport/api
+module github.com/rtalhouk/teleport/api
 
-go 1.19
+go 1.23
 
 require (
 	github.com/go-piv/piv-go v1.10.0

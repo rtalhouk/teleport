@@ -25,8 +25,8 @@ import (
 	"github.com/gogo/protobuf/proto"
 	"github.com/gravitational/trace"
 
-	"github.com/gravitational/teleport/api/constants"
-	"github.com/gravitational/teleport/api/utils"
+	"github.com/rtalhouk/teleport/api/constants"
+	"github.com/rtalhouk/teleport/api/utils"
 )
 
 // Application represents a web, TCP or cloud console application.

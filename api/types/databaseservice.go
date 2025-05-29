@@ -19,7 +19,7 @@ package types
 import (
 	"github.com/gravitational/trace"
 
-	"github.com/gravitational/teleport/api/utils"
+	"github.com/rtalhouk/teleport/api/utils"
 )
 
 // DatabaseService represents a DatabaseService (agent).

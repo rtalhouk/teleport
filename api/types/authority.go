@@ -24,7 +24,7 @@ import (
 	"github.com/gravitational/trace"
 	"golang.org/x/exp/slices"
 
-	"github.com/gravitational/teleport/api/constants"
+	"github.com/rtalhouk/teleport/api/constants"
 )
 
 // CertAuthority is a host or user certificate authority that can check and if

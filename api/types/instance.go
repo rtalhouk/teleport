@@ -23,7 +23,7 @@ import (
 	"github.com/gravitational/trace"
 	"golang.org/x/exp/slices"
 
-	"github.com/gravitational/teleport/api/defaults"
+	"github.com/rtalhouk/teleport/api/defaults"
 )
 
 // Match checks if the given instance appears to match this filter.

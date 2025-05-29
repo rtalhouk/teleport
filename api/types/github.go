@@ -23,8 +23,8 @@ import (
 	log "github.com/sirupsen/logrus"
 	"golang.org/x/crypto/ssh"
 
-	"github.com/gravitational/teleport/api/defaults"
-	"github.com/gravitational/teleport/api/utils"
+	"github.com/rtalhouk/teleport/api/defaults"
+	"github.com/rtalhouk/teleport/api/utils"
 )
 
 const githubURL = "https://github.com"

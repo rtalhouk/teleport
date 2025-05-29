@@ -18,7 +18,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/gravitational/teleport/api/types"
+	"github.com/rtalhouk/teleport/api/types"
 )
 
 func TestMFADevice_CheckAndSetDefaults(t *testing.T) {

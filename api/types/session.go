@@ -23,7 +23,7 @@ import (
 
 	"github.com/gravitational/trace"
 
-	"github.com/gravitational/teleport/api/defaults"
+	"github.com/rtalhouk/teleport/api/defaults"
 )
 
 // WebSessionsGetter provides access to web sessions

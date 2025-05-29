@@ -25,7 +25,7 @@ import (
 	"github.com/gravitational/trace"
 	"golang.org/x/exp/slices"
 
-	"github.com/gravitational/teleport/api/utils"
+	"github.com/rtalhouk/teleport/api/utils"
 )
 
 // KubeCluster represents a kubernetes cluster.

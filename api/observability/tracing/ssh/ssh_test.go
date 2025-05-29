@@ -33,7 +33,7 @@ import (
 	sdktrace "go.opentelemetry.io/otel/sdk/trace"
 	"golang.org/x/crypto/ssh"
 
-	"github.com/gravitational/teleport/api/observability/tracing"
+	"github.com/rtalhouk/teleport/api/observability/tracing"
 )
 
 const testPayload = "test"

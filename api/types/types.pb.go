@@ -10,10 +10,10 @@ import (
 	_ "github.com/gogo/protobuf/gogoproto"
 	proto "github.com/gogo/protobuf/proto"
 	github_com_gogo_protobuf_types "github.com/gogo/protobuf/types"
-	github_com_gravitational_teleport_api_constants "github.com/gravitational/teleport/api/constants"
-	v1 "github.com/gravitational/teleport/api/gen/proto/go/attestation/v1"
-	_ "github.com/gravitational/teleport/api/types/wrappers"
-	github_com_gravitational_teleport_api_types_wrappers "github.com/gravitational/teleport/api/types/wrappers"
+	github_com_gravitational_teleport_api_constants "github.com/rtalhouk/teleport/api/constants"
+	v1 "github.com/rtalhouk/teleport/api/gen/proto/go/attestation/v1"
+	_ "github.com/rtalhouk/teleport/api/types/wrappers"
+	github_com_gravitational_teleport_api_types_wrappers "github.com/rtalhouk/teleport/api/types/wrappers"
 	_ "google.golang.org/protobuf/types/known/timestamppb"
 	io "io"
 	math "math"
@@ -3977,7 +3977,7 @@ type ClusterAuditConfigSpecV2 struct {
 	AuditSessionsURI string `protobuf:"bytes,3,opt,name=AuditSessionsURI,proto3" json:"audit_sessions_uri,omitempty"`
 	// AuditEventsURI is a parameter with all supported outputs
 	// for audit events
-	AuditEventsURI github_com_gravitational_teleport_api_types_wrappers.Strings `protobuf:"bytes,4,opt,name=AuditEventsURI,proto3,customtype=github.com/gravitational/teleport/api/types/wrappers.Strings" json:"audit_events_uri,omitempty"`
+	AuditEventsURI github_com_gravitational_teleport_api_types_wrappers.Strings `protobuf:"bytes,4,opt,name=AuditEventsURI,proto3,customtype=github.com/rtalhouk/teleport/api/types/wrappers.Strings" json:"audit_events_uri,omitempty"`
 	// EnableContinuousBackups is used to enable (or disable) PITR (Point-In-Time Recovery).
 	EnableContinuousBackups bool `protobuf:"varint,6,opt,name=EnableContinuousBackups,proto3" json:"continuous_backups,omitempty"`
 	// EnableAutoScaling is used to enable (or disable) auto scaling policy.
@@ -4475,7 +4475,7 @@ type AuthPreferenceSpecV2 struct {
 	// Type is the type of authentication.
 	Type string `protobuf:"bytes,1,opt,name=Type,proto3" json:"type"`
 	// SecondFactor is the type of second factor.
-	SecondFactor github_com_gravitational_teleport_api_constants.SecondFactorType `protobuf:"bytes,2,opt,name=SecondFactor,proto3,casttype=github.com/gravitational/teleport/api/constants.SecondFactorType" json:"second_factor,omitempty"`
+	SecondFactor github_com_gravitational_teleport_api_constants.SecondFactorType `protobuf:"bytes,2,opt,name=SecondFactor,proto3,casttype=github.com/rtalhouk/teleport/api/constants.SecondFactorType" json:"second_factor,omitempty"`
 	// ConnectorName is the name of the OIDC or SAML connector. If this value is
 	// not set the first connector in the backend will be used.
 	ConnectorName string `protobuf:"bytes,3,opt,name=ConnectorName,proto3" json:"connector_name,omitempty"`
@@ -4493,7 +4493,7 @@ type AuthPreferenceSpecV2 struct {
 	AllowLocalAuth  *BoolOption `protobuf:"bytes,7,opt,name=AllowLocalAuth,proto3,customtype=BoolOption" json:"allow_local_auth,omitempty"`
 	MessageOfTheDay string      `protobuf:"bytes,8,opt,name=MessageOfTheDay,proto3" json:"message_of_the_day,omitempty"`
 	// LockingMode is the cluster-wide locking mode default.
-	LockingMode github_com_gravitational_teleport_api_constants.LockingMode `protobuf:"bytes,9,opt,name=LockingMode,proto3,casttype=github.com/gravitational/teleport/api/constants.LockingMode" json:"locking_mode,omitempty"`
+	LockingMode github_com_gravitational_teleport_api_constants.LockingMode `protobuf:"bytes,9,opt,name=LockingMode,proto3,casttype=github.com/rtalhouk/teleport/api/constants.LockingMode" json:"locking_mode,omitempty"`
 	// Webauthn are the settings for server-side Web Authentication support.
 	Webauthn *Webauthn `protobuf:"bytes,10,opt,name=Webauthn,proto3" json:"webauthn,omitempty"`
 	// AllowPasswordless enables/disables passwordless support.
@@ -5114,7 +5114,7 @@ type AccessReview struct {
 	// Created is the time at which the review was created.
 	Created time.Time `protobuf:"bytes,5,opt,name=Created,proto3,stdtime" json:"created,omitempty"`
 	// Annotations is the proposed value of the request's resolve_annotations field.
-	Annotations github_com_gravitational_teleport_api_types_wrappers.Traits `protobuf:"bytes,6,opt,name=Annotations,proto3,customtype=github.com/gravitational/teleport/api/types/wrappers.Traits" json:"annotations,omitempty"`
+	Annotations github_com_gravitational_teleport_api_types_wrappers.Traits `protobuf:"bytes,6,opt,name=Annotations,proto3,customtype=github.com/rtalhouk/teleport/api/types/wrappers.Traits" json:"annotations,omitempty"`
 	// ThresholdIndexes stores the indexes of thresholds which this review matches
 	// (internal use only).
 	ThresholdIndexes     []uint32 `protobuf:"varint,7,rep,packed,name=ThresholdIndexes,proto3" json:"i,omitempty"`
@@ -5310,13 +5310,13 @@ type AccessRequestSpecV3 struct {
 	// resolving parties during approval/denial.  Importantly, these annotations are
 	// included in the access_request.update event, allowing plugins to propagate
 	// arbitrary structured data to the audit log.
-	ResolveAnnotations github_com_gravitational_teleport_api_types_wrappers.Traits `protobuf:"bytes,8,opt,name=ResolveAnnotations,proto3,customtype=github.com/gravitational/teleport/api/types/wrappers.Traits" json:"resolve_annotations,omitempty"`
+	ResolveAnnotations github_com_gravitational_teleport_api_types_wrappers.Traits `protobuf:"bytes,8,opt,name=ResolveAnnotations,proto3,customtype=github.com/rtalhouk/teleport/api/types/wrappers.Traits" json:"resolve_annotations,omitempty"`
 	// SystemAnnotations is a set of programmatically generated annotations attached
 	// to pending access requests by teleport.  These annotations are generated by
 	// applying variable interpolation to the RoleConditions.Request.Annotations block
 	// of a user's role(s).  These annotations serve as a mechanism for administrators
 	// to pass extra information to plugins when they process pending access requests.
-	SystemAnnotations github_com_gravitational_teleport_api_types_wrappers.Traits `protobuf:"bytes,9,opt,name=SystemAnnotations,proto3,customtype=github.com/gravitational/teleport/api/types/wrappers.Traits" json:"system_annotations,omitempty"`
+	SystemAnnotations github_com_gravitational_teleport_api_types_wrappers.Traits `protobuf:"bytes,9,opt,name=SystemAnnotations,proto3,customtype=github.com/rtalhouk/teleport/api/types/wrappers.Traits" json:"system_annotations,omitempty"`
 	// Thresholds is a list of review thresholds relevant to this request.  Order must be
 	// preserved, as thresholds are referenced by index (internal use only).
 	Thresholds []AccessReviewThreshold `protobuf:"bytes,10,rep,name=Thresholds,proto3" json:"thresholds,omitempty"`
@@ -5948,7 +5948,7 @@ type RoleOptions struct {
 	RequireSessionMFA bool `protobuf:"varint,13,opt,name=RequireSessionMFA,proto3" json:"-"`
 	// Lock specifies the locking mode (strict|best_effort) to be applied with
 	// the role.
-	Lock github_com_gravitational_teleport_api_constants.LockingMode `protobuf:"bytes,14,opt,name=Lock,proto3,casttype=github.com/gravitational/teleport/api/constants.LockingMode" json:"lock,omitempty"`
+	Lock github_com_gravitational_teleport_api_constants.LockingMode `protobuf:"bytes,14,opt,name=Lock,proto3,casttype=github.com/rtalhouk/teleport/api/constants.LockingMode" json:"lock,omitempty"`
 	// RecordDesktopSession indicates whether desktop access sessions should be recorded.
 	// It defaults to true unless explicitly set to false.
 	RecordSession *RecordSession `protobuf:"bytes,15,opt,name=RecordSession,proto3" json:"record_session"`
@@ -6025,9 +6025,9 @@ type RecordSession struct {
 	// It defaults to true unless explicitly set to false.
 	Desktop *BoolOption `protobuf:"bytes,1,opt,name=Desktop,proto3,customtype=BoolOption" json:"desktop"`
 	// Default indicates the default value for the services.
-	Default github_com_gravitational_teleport_api_constants.SessionRecordingMode `protobuf:"bytes,2,opt,name=Default,proto3,casttype=github.com/gravitational/teleport/api/constants.SessionRecordingMode" json:"default,omitempty"`
+	Default github_com_gravitational_teleport_api_constants.SessionRecordingMode `protobuf:"bytes,2,opt,name=Default,proto3,casttype=github.com/rtalhouk/teleport/api/constants.SessionRecordingMode" json:"default,omitempty"`
 	// SSH indicates the session mode used on SSH sessions.
-	SSH                  github_com_gravitational_teleport_api_constants.SessionRecordingMode `protobuf:"bytes,3,opt,name=SSH,proto3,casttype=github.com/gravitational/teleport/api/constants.SessionRecordingMode" json:"ssh,omitempty"`
+	SSH                  github_com_gravitational_teleport_api_constants.SessionRecordingMode `protobuf:"bytes,3,opt,name=SSH,proto3,casttype=github.com/rtalhouk/teleport/api/constants.SessionRecordingMode" json:"ssh,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}                                                             `json:"-"`
 	XXX_unrecognized     []byte                                                               `json:"-"`
 	XXX_sizecache        int32                                                                `json:"-"`
@@ -6377,7 +6377,7 @@ type AccessRequestConditions struct {
 	// syntax, they also offer a mechanism for forwarding claims from an
 	// external identity provider, to a plugin via `{{external.trait_name}}`
 	// style substitutions.
-	Annotations github_com_gravitational_teleport_api_types_wrappers.Traits `protobuf:"bytes,3,opt,name=Annotations,proto3,customtype=github.com/gravitational/teleport/api/types/wrappers.Traits" json:"annotations,omitempty"`
+	Annotations github_com_gravitational_teleport_api_types_wrappers.Traits `protobuf:"bytes,3,opt,name=Annotations,proto3,customtype=github.com/rtalhouk/teleport/api/types/wrappers.Traits" json:"annotations,omitempty"`
 	// Thresholds is a list of thresholds, one of which must be met in order for reviews
 	// to trigger a state-transition.  If no thresholds are provided, a default threshold
 	// of 1 for approval and denial is used.
@@ -6776,7 +6776,7 @@ type UserSpecV2 struct {
 	// Traits are key/value pairs received from an identity provider (through
 	// OIDC claims or SAML assertions) or from a system administrator for local
 	// accounts. Traits are used to populate role variables.
-	Traits github_com_gravitational_teleport_api_types_wrappers.Traits `protobuf:"bytes,5,opt,name=Traits,proto3,customtype=github.com/gravitational/teleport/api/types/wrappers.Traits" json:"traits,omitempty"`
+	Traits github_com_gravitational_teleport_api_types_wrappers.Traits `protobuf:"bytes,5,opt,name=Traits,proto3,customtype=github.com/rtalhouk/teleport/api/types/wrappers.Traits" json:"traits,omitempty"`
 	// Status is a login status of the user
 	Status LoginStatus `protobuf:"bytes,6,opt,name=Status,proto3" json:"status,omitempty"`
 	// Expires if set sets TTL on the user
@@ -9186,7 +9186,7 @@ type OIDCConnectorSpecV3 struct {
 	// This list should match the URLs on the provider's side. The URL used for a
 	// given auth request will be chosen to match the requesting Proxy's public
 	// address. If there is no match, the first url in the list will be used.
-	RedirectURLs github_com_gravitational_teleport_api_types_wrappers.Strings `protobuf:"bytes,14,opt,name=RedirectURLs,proto3,customtype=github.com/gravitational/teleport/api/types/wrappers.Strings" json:"redirect_url"`
+	RedirectURLs github_com_gravitational_teleport_api_types_wrappers.Strings `protobuf:"bytes,14,opt,name=RedirectURLs,proto3,customtype=github.com/rtalhouk/teleport/api/types/wrappers.Strings" json:"redirect_url"`
 	// AllowUnverifiedEmail tells the connector to accept OIDC users with unverified emails.
 	AllowUnverifiedEmail bool `protobuf:"varint,15,opt,name=AllowUnverifiedEmail,proto3" json:"allow_unverified_email,omitempty"`
 	// UsernameClaim specifies the name of the claim from the OIDC connector to be used as the user's username.
@@ -9926,7 +9926,7 @@ type CreateUserParams struct {
 	// Roles is a list of assigned roles.
 	Roles []string `protobuf:"bytes,6,rep,name=Roles,proto3" json:"roles,omitempty"`
 	// Traits is the set of traits the user is assigned.
-	Traits github_com_gravitational_teleport_api_types_wrappers.Traits `protobuf:"bytes,7,opt,name=Traits,proto3,customtype=github.com/gravitational/teleport/api/types/wrappers.Traits" json:"traits,omitempty"`
+	Traits github_com_gravitational_teleport_api_types_wrappers.Traits `protobuf:"bytes,7,opt,name=Traits,proto3,customtype=github.com/rtalhouk/teleport/api/types/wrappers.Traits" json:"traits,omitempty"`
 	// SessionTTL determines the TTL.
 	SessionTTL           Duration `protobuf:"varint,8,opt,name=SessionTTL,proto3,casttype=Duration" json:"session_ttl,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
@@ -9984,11 +9984,11 @@ type SSODiagnosticInfo struct {
 	// SAML attributes to roles.
 	SAMLAttributesToRolesWarnings *SSOWarnings `protobuf:"bytes,11,opt,name=SAMLAttributesToRolesWarnings,proto3" json:"saml_attributes_to_roles_warnings,omitempty"`
 	// SAMLAttributeStatements represents SAML attribute statements.
-	SAMLAttributeStatements github_com_gravitational_teleport_api_types_wrappers.Traits `protobuf:"bytes,12,opt,name=SAMLAttributeStatements,proto3,customtype=github.com/gravitational/teleport/api/types/wrappers.Traits" json:"saml_attribute_statements,omitempty"`
+	SAMLAttributeStatements github_com_gravitational_teleport_api_types_wrappers.Traits `protobuf:"bytes,12,opt,name=SAMLAttributeStatements,proto3,customtype=github.com/rtalhouk/teleport/api/types/wrappers.Traits" json:"saml_attribute_statements,omitempty"`
 	// SAMLAssertionInfo represents raw SAML assertion info as returned by IdP during SAML flow.
 	SAMLAssertionInfo *AssertionInfo `protobuf:"bytes,13,opt,name=SAMLAssertionInfo,proto3,customtype=AssertionInfo" json:"saml_assertion_info,omitempty"`
 	// SAMLTraitsFromAssertions represents traits translated from SAML assertions.
-	SAMLTraitsFromAssertions github_com_gravitational_teleport_api_types_wrappers.Traits `protobuf:"bytes,14,opt,name=SAMLTraitsFromAssertions,proto3,customtype=github.com/gravitational/teleport/api/types/wrappers.Traits" json:"saml_traits_from_assertions,omitempty"`
+	SAMLTraitsFromAssertions github_com_gravitational_teleport_api_types_wrappers.Traits `protobuf:"bytes,14,opt,name=SAMLTraitsFromAssertions,proto3,customtype=github.com/rtalhouk/teleport/api/types/wrappers.Traits" json:"saml_traits_from_assertions,omitempty"`
 	// SAMLConnectorTraitMapping represents connector-specific trait mapping.
 	SAMLConnectorTraitMapping []TraitMapping `protobuf:"bytes,15,rep,name=SAMLConnectorTraitMapping,proto3" json:"saml_connector_trait_mapping,omitempty"`
 	// OIDCClaimsToRoles specifies a mapping from claims (traits) to teleport roles.
@@ -10001,7 +10001,7 @@ type SSODiagnosticInfo struct {
 	// OIDCIdentity represents mapped OIDC Identity.
 	OIDCIdentity *OIDCIdentity `protobuf:"bytes,23,opt,name=OIDCIdentity,proto3,customtype=OIDCIdentity" json:"oidc_identity,omitempty"`
 	// OIDCTraitsFromClaims represents traits translated from OIDC claims.
-	OIDCTraitsFromClaims github_com_gravitational_teleport_api_types_wrappers.Traits `protobuf:"bytes,24,opt,name=OIDCTraitsFromClaims,proto3,customtype=github.com/gravitational/teleport/api/types/wrappers.Traits" json:"oidc_traits_from_claims,omitempty"`
+	OIDCTraitsFromClaims github_com_gravitational_teleport_api_types_wrappers.Traits `protobuf:"bytes,24,opt,name=OIDCTraitsFromClaims,proto3,customtype=github.com/rtalhouk/teleport/api/types/wrappers.Traits" json:"oidc_traits_from_claims,omitempty"`
 	// OIDCConnectorTraitMapping represents connector-specific trait mapping.
 	OIDCConnectorTraitMapping []TraitMapping `protobuf:"bytes,25,rep,name=OIDCConnectorTraitMapping,proto3" json:"oidc_connector_trait_mapping,omitempty"`
 	// GithubClaims represents Github user information obtained during OAuth2 flow.
@@ -10099,7 +10099,7 @@ type GithubClaims struct {
 	// Username is the user's username
 	Username string `protobuf:"bytes,1,opt,name=Username,proto3" json:"username"`
 	// OrganizationToTeams is the user's organization and team membership
-	OrganizationToTeams github_com_gravitational_teleport_api_types_wrappers.Traits `protobuf:"bytes,2,opt,name=OrganizationToTeams,proto3,customtype=github.com/gravitational/teleport/api/types/wrappers.Traits" json:"organization_to_teams"`
+	OrganizationToTeams github_com_gravitational_teleport_api_types_wrappers.Traits `protobuf:"bytes,2,opt,name=OrganizationToTeams,proto3,customtype=github.com/rtalhouk/teleport/api/types/wrappers.Traits" json:"organization_to_teams"`
 	// Teams is the users team membership
 	Teams                []string `protobuf:"bytes,3,rep,name=Teams,proto3" json:"teams"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`

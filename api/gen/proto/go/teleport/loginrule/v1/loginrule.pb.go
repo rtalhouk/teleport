@@ -21,8 +21,8 @@
 package v1
 
 import (
-	types "github.com/gravitational/teleport/api/types"
-	wrappers "github.com/gravitational/teleport/api/types/wrappers"
+	types "github.com/rtalhouk/teleport/api/types"
+	wrappers "github.com/rtalhouk/teleport/api/types/wrappers"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
