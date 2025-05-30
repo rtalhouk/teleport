@@ -18,12 +18,12 @@ package types
 
 import (
 	"fmt"
+	"slices"
 	"sort"
 	"time"
 
 	"github.com/gogo/protobuf/proto"
 	"github.com/gravitational/trace"
-	"golang.org/x/exp/slices"
 
 	"github.com/rtalhouk/teleport/api/utils"
 )

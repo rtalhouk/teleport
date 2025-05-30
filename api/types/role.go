@@ -19,11 +19,11 @@ package types
 import (
 	"encoding/json"
 	"fmt"
+	"slices"
 	"time"
 
 	"github.com/gogo/protobuf/proto"
 	"github.com/gravitational/trace"
-	"golang.org/x/exp/slices"
 
 	"github.com/rtalhouk/teleport/api/constants"
 	"github.com/rtalhouk/teleport/api/defaults"

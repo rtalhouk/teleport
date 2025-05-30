@@ -18,11 +18,11 @@ package types
 
 import (
 	"fmt"
+	"slices"
 	"strings"
 	"time"
 
 	"github.com/gravitational/trace"
-	"golang.org/x/exp/slices"
 
 	"github.com/rtalhouk/teleport/api/defaults"
 	apiutils "github.com/rtalhouk/teleport/api/utils"
